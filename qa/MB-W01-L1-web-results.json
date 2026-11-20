@@ -1,6 +1,6 @@
 {
-  "passed": 61,
-  "total": 61,
+  "passed": 70,
+  "total": 70,
   "failed": [],
   "checks": {
     "PDF exists, exact 121 A4 pages": true,
@@ -63,7 +63,16 @@
     "Print mode hides regular app layout": true,
     "Reading focus follows section navigation": true,
     "Solution panel linked by aria-controls": true,
-    "Malformed URL fragment fails safely": true
+    "Malformed URL fragment fails safely": true,
+    "Print includes every stable reflection ID": true,
+    "Print eagerly loads 13 teaching SVGs": true,
+    "Print references all 22 SVG images": true,
+    "Print prevents orphan examples": true,
+    "Focus indicator improved for light contrast": true,
+    "Mobile TOC inert while closed": true,
+    "Mobile open TOC focuses a link": true,
+    "Mobile Escape restores focus": true,
+    "Desktop TOC remains focusable": true
   },
   "details": {
     "PDF exists, exact 121 A4 pages": null,
@@ -142,5 +151,21 @@
     "print_svg_visual_audit": "NOT_RUN (images removed in isolated print test)",
     "http_navigation": "BLOCKED_BY_ADMINISTRATOR",
     "review_status": "BLOCKED pending manual approval and full live E2E"
+  },
+  "independent_audit": {
+    "date": "2026-11-20",
+    "source_pdf_pages_A4": 121,
+    "semantic_parity_checks_passed": 1153,
+    "semantic_parity_checks_total": 1153,
+    "accessibility_smoke_passed": 121,
+    "accessibility_smoke_total": 121,
+    "full_svg_print_pages_A4": 141,
+    "full_svg_print_loaded": 22,
+    "full_svg_print_total": 22,
+    "axe_core": "NOT_RUN",
+    "real_hosting_e2e": "NOT_RUN",
+    "manual_status": "DRAFT",
+    "web_status": "PREVIEW",
+    "approval_status": "BLOCKED"
   }
 }
