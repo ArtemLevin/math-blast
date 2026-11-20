@@ -80,7 +80,11 @@
     const target=raw && document.getElementById(raw);if(target){target.setAttribute('tabindex','-1');target.focus({preventScroll:true});target.scrollIntoView({block:'start'});target.classList.add('highlight-target');setTimeout(()=>target.classList.remove('highlight-target'),2000)}else{if(isRouteChange)ROOT.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'})}
     closeMenu();
   }
-  function closeMenu(){document.getElementById('sidebar').classList.remove('open');document.getElementById('mobile-shade').hidden=true;document.getElementById('menu-open').setAttribute('aria-expanded','false')}
+  const mobileQuery=window.matchMedia('(max-width: 760px)');
+  function syncSidebarInert(){const sidebar=document.getElementById('sidebar');sidebar.inert=mobileQuery.matches&&!sidebar.classList.contains('open')}
+  function closeMenu(returnFocus=false){const sidebar=document.getElementById('sidebar');const opened=sidebar.classList.contains('open');sidebar.classList.remove('open');document.getElementById('mobile-shade').hidden=true;document.getElementById('menu-open').setAttribute('aria-expanded','false');syncSidebarInert();if(opened&&returnFocus)document.getElementById('menu-open').focus()}
+  if(mobileQuery.addEventListener)mobileQuery.addEventListener('change',syncSidebarInert);
+
   function theme(){document.body.classList.toggle('dark',state.theme==='dark');const btn=document.getElementById('theme-toggle');btn.textContent=state.theme==='dark'?'☀':'◐';btn.setAttribute('aria-label',state.theme==='dark'?'Включить светлую тему':'Включить тёмную тему')}
   async function updatePanel(panel,html){panel.hidden=false;panel.innerHTML=html;await typeset(panel)}
   document.addEventListener('click',async event=>{
@@ -88,8 +92,8 @@
     el=event.target.closest('[data-reveal]');if(el){const id=el.dataset.reveal,p=BOOK.practice.find(x=>x.id===id);if(!p)return;state.revealed[id]=!state.revealed[id];save();const panel=el.closest('.problem').querySelector('[data-solution-panel]');panel.hidden=!state.revealed[id];el.setAttribute('aria-expanded',String(state.revealed[id]));el.textContent=state.revealed[id]?'Скрыть решение':'Показать решение';if(!panel.hidden)await typeset(panel);return}
     el=event.target.closest('[data-page-type]');if(el){const n=Number(el.dataset.page);if(el.dataset.pageType==='practice')practicePage=n;else solutionsPage=n;await render();return}
     if(event.target.id==='resume'){location.hash='#'+(state.lastRoute&&state.lastRoute!=='intro'?state.lastRoute:'theory-01');return}
-    if(event.target.id==='menu-open'){const open=document.getElementById('sidebar').classList.toggle('open');document.getElementById('mobile-shade').hidden=!open;event.target.setAttribute('aria-expanded',String(open));return}
-    if(event.target.id==='mobile-shade'){closeMenu();return}
+    if(event.target.id==='menu-open'){const side=document.getElementById('sidebar');const open=side.classList.toggle('open');document.getElementById('mobile-shade').hidden=!open;event.target.setAttribute('aria-expanded',String(open));syncSidebarInert();if(open)TOC.querySelector('a')?.focus();else event.target.focus();return}
+    if(event.target.id==='mobile-shade'){closeMenu(true);return}
     if(event.target.id==='theme-toggle'){state.theme=state.theme==='dark'?'light':'dark';theme();save();return}
     if(event.target.id==='print-book'){await printFullBook();return}
   });
@@ -99,7 +103,17 @@
   });
   document.addEventListener('input',event=>{const el=event.target;if(el.matches('[data-note]')){state.notes[el.dataset.note]=el.value;save()}});
   window.addEventListener('hashchange',render);
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+  document.addEventListener('keydown',e=>{
+    const side=document.getElementById('sidebar');
+    if(e.key==='Escape'){closeMenu(true);return}
+    if(e.key==='Tab'&&mobileQuery.matches&&side.classList.contains('open')){
+      const focusable=[...side.querySelectorAll('a,button,input,select,textarea,[tabindex]:not([tabindex="-1"])')].filter(x=>!x.disabled&&!x.hidden);
+      if(!focusable.length)return;
+      const first=focusable[0],last=focusable[focusable.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+    }
+  });
   // Print renderer contains EVERY block, including hints and full solutions, regardless of the current filters.
   function printFullHTMLRaw(){
     const temp=document.createElement('div'); temp.innerHTML=intro();
@@ -120,11 +134,11 @@
       <h2>Краткие ответы к блоку ${i+1}</h2>${answerMini(tasks,i*10)}`;
     }).join('');
     const solutionAll=BOOK.practice.map((p,i)=>`<section class="section-card"><h2>Решение ${i+1} · ${esc(p.id)}</h2><p class="problem-text">${rich(p.prompt)}</p><div class="reading-text">${rich(p.solution)}</div><p><strong>Ответ:</strong> ${rich(p.answer)}</p></section>`).join('');
-    const questions=BOOK.reflections.theory.concat(BOOK.reflections.transfers,BOOK.reflections.heuristics,BOOK.reflections.checkpoints).map(x=>`<section class="section-card"><p>${rich(x.prompt)}</p><p><strong>Ответ:</strong> ${rich(x.solution)}</p></section>`).join('');
+    const questions=BOOK.reflections.theory.concat(BOOK.reflections.transfers,BOOK.reflections.heuristics,BOOK.reflections.checkpoints).map(x=>`<section class="section-card" id="${esc(x.id)}"><span class="problem-id">${esc(x.id)}</span><p>${rich(x.prompt)}</p><p><strong>Ответ:</strong> ${rich(x.solution)}</p></section>`).join('');
     return `<div class="book-wrap print-view">${cover}${introSections}${theoryAll}<div class="chapter-header"><h1>Тридцать разобранных примеров</h1></div>${exAll}${groups}<div class="chapter-header"><h1>Одиннадцать эвристик</h1></div>${methodList()}<div class="chapter-header"><h1>Полные решения 90 задач</h1></div>${solutionAll}<div class="chapter-header"><h1>59 дополнительных вопросов</h1></div>${questions}<div class="chapter-header"><h1>Таблица ответов</h1></div>${answerTable()}<div class="chapter-header"><h1>Источники</h1></div>${BOOK.sources.map(s=>`<p>${s.map(rich).join(' — ')}</p>`).join('')}</div>`;
   }
-  function printFullHTML(){return printFullHTMLRaw().replace(/<details>/g,'<details open>')}
+  function printFullHTML(){return printFullHTMLRaw().replace(/<details>/g,'<details open>').replace(/loading="lazy"/g,'loading="eager"')}
   let printing=false;async function printFullBook(){if(printing)return;printing=true;const node=document.getElementById('print-book-content');node.innerHTML=printFullHTML();node.setAttribute('aria-hidden','false');await typeset(node);await Promise.all([...node.querySelectorAll('img')].map(img=>img.complete?Promise.resolve():new Promise(resolve=>{img.onload=resolve;img.onerror=resolve})));window.print();node.innerHTML='';node.setAttribute('aria-hidden','true');printing=false}
-  rebuildToc();theme();progress();render();
+  rebuildToc();theme();syncSidebarInert();progress();render();
   window.__MB_TEST__={BOOK,STORE_KEY,state,getRenderedSection:()=>currentRoute(),count,printFullHTML};
 })();
