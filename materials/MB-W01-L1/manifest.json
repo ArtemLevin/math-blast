@@ -28,10 +28,10 @@
   "pdf_size_bytes": 569774,
   "status": "DRAFT",
   "source_artifacts_in_pr": false,
-  "pdf_in_pr": false,
+  "pdf_in_pr": true,
   "web_route": null,
   "date": "2026-11-20",
-  "required_next_gate": "Transfer entire PDF/source archive into PR; independent manual review per 02_REVIEW_MANUAL.md",
+  "required_next_gate": "Commit book.tex/build scripts/figures and execute CI; independent report M1-M12 complete with publication gate BLOCKED",
   "style_name": "Академический 3.3",
   "style_source": "06_REFERENCE_STYLE.md",
   "mini_exercises": 39,
@@ -47,5 +47,8 @@
     "author_dedication": 70
   },
   "tex_sha256": "8f2a48d5fde224a9677096e3084dd29a4f53ea9f8fc6c8126adb41d9e68805ba",
-  "last_revision_note": "Removed printed name placeholder from cover; added two handwriting lines. PDF full package supplied separately, not committed in PR."
+  "last_revision_note": "PDF and canonical JSON added to PR #1, matching PR #2; reproducible TeX and generator remain available in the separate archive but are not yet committed.",
+  "review_status": "BLOCKED",
+  "pdf_git_blob_sha": "cb7f1160ce3841c9362f06dd0f7e785b08128f1f",
+  "content_git_blob_sha": "1f7fb2a894bfd6b245c40488993063b7cda2c859"
 }
