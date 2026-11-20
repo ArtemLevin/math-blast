@@ -1,6 +1,6 @@
 {
-  "passed": 55,
-  "total": 55,
+  "passed": 61,
+  "total": 61,
   "failed": [],
   "checks": {
     "PDF exists, exact 121 A4 pages": true,
@@ -57,7 +57,13 @@
     "Print HTML includes 90 full solutions": true,
     "Print HTML includes all 90 practice IDs": true,
     "Print HTML includes 59 reflection prompts": true,
-    "Browser JS no uncaught errors": true
+    "Browser JS no uncaught errors": true,
+    "Print questions expanded by default": true,
+    "Print has no orphan theory/algorithm summary headings": true,
+    "Print mode hides regular app layout": true,
+    "Reading focus follows section navigation": true,
+    "Solution panel linked by aria-controls": true,
+    "Malformed URL fragment fails safely": true
   },
   "details": {
     "PDF exists, exact 121 A4 pages": null,
@@ -127,5 +133,14 @@
     "Browser JS no uncaught errors": []
   },
   "browser_errors": [],
-  "environment": "Chromium headless. Sandbox browser navigation blocked; HTML/CSS/JS loaded via set_content + add_script_tag, local images verified via SVG XML separately."
+  "environment": "Chromium headless. Sandbox browser navigation blocked; HTML/CSS/JS loaded via set_content + add_script_tag, local images verified via SVG XML separately.",
+  "review_postfix": {
+    "independent_recheck": "2026-11-20",
+    "print_pdf_pages_A4": 126,
+    "print_mathjax_typeset": true,
+    "print_problem_ids_present": 90,
+    "print_svg_visual_audit": "NOT_RUN (images removed in isolated print test)",
+    "http_navigation": "BLOCKED_BY_ADMINISTRATOR",
+    "review_status": "BLOCKED pending manual approval and full live E2E"
+  }
 }
