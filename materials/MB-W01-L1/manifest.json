@@ -24,8 +24,8 @@
   "reflection_questions_with_answers": 59,
   "page_count_actual": 121,
   "all_pages_A4": true,
-  "pdf_sha256": "9048fa1abc9d5f04662426a04f8ba4e6c397056059bedcd1b63668478013a15c",
-  "pdf_size_bytes": 750748,
+  "pdf_sha256": "fe75315c7c6097a9e05587a8dc11b41990be03433c91885f06268c06faba05cf",
+  "pdf_size_bytes": 569774,
   "status": "DRAFT",
   "source_artifacts_in_pr": false,
   "pdf_in_pr": false,
@@ -38,8 +38,14 @@
   "algorithm_pages": 9,
   "training_blocks": 9,
   "build_engine": "pdfLaTeX",
-  "student_placeholder": "ФИО_Ученика",
   "build_command": "python build_book.py --compile",
   "structural_checks": "28/28",
-  "style_checks": "32/32"
+  "style_checks": "32/32",
+  "student_name_field": "blank_line_for_handwriting",
+  "student_name_blank_lines_mm": {
+    "student": 85,
+    "author_dedication": 70
+  },
+  "tex_sha256": "8f2a48d5fde224a9677096e3084dd29a4f53ea9f8fc6c8126adb41d9e68805ba",
+  "last_revision_note": "Removed printed name placeholder from cover; added two handwriting lines. PDF full package supplied separately, not committed in PR."
 }
