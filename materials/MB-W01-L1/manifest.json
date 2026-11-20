@@ -28,10 +28,10 @@
   "pdf_size_bytes": 569774,
   "status": "DRAFT",
   "source_artifacts_in_pr": false,
-  "pdf_in_pr": false,
-  "web_route": null,
+  "pdf_in_pr": true,
+  "web_route": "books/MB-W01-L1/index.html",
   "date": "2026-11-20",
-  "required_next_gate": "Transfer entire PDF/source archive into PR; independent manual review per 02_REVIEW_MANUAL.md",
+  "required_next_gate": "Independent PDF and full web review; this branch is PREVIEW only",
   "style_name": "Академический 3.3",
   "style_source": "06_REFERENCE_STYLE.md",
   "mini_exercises": 39,
@@ -47,5 +47,8 @@
     "author_dedication": 70
   },
   "tex_sha256": "8f2a48d5fde224a9677096e3084dd29a4f53ea9f8fc6c8126adb41d9e68805ba",
-  "last_revision_note": "Removed printed name placeholder from cover; added two handwriting lines. PDF full package supplied separately, not committed in PR."
+  "last_revision_note": "Removed printed name placeholder from cover; added two handwriting lines. PDF full package supplied separately, not committed in PR.",
+  "web_status": "PREVIEW",
+  "canonical_content_in_pr": true,
+  "web_book_content_sha256": "0c91c8cd3ce9e20f27966ea04e391c48acd9c40280948e2d84ae79f94b94991e"
 }
