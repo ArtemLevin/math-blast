@@ -1,0 +1,3 @@
+\begin{tikzpicture}[font=\small,node distance=2mm]
+\foreach \i/\s in {0/Область,1/Кванторы,2/Допустимость операций,3/Полнота случаев,4/Точный итог}{\node[draw,rounded corners,fill=mbpale,minimum width=5.8cm,anchor=north] (c\i) at (0,-\i*.65) {\(\square\)\quad \s};}
+\end{tikzpicture}
