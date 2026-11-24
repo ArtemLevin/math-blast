@@ -1,0 +1,4 @@
+\begin{tikzpicture}[>=Stealth,font=\scriptsize,node distance=4mm]
+\foreach \i/\s in {0/Формулировка,1/Выбор довода,2/Строгая запись,3/Самопроверка}{\node[draw,rounded corners,fill=mbpale,minimum width=2.3cm,minimum height=.8cm] (t\i) at (\i*2.65,0) {\s};}
+\foreach \i/\j in {0/1,1/2,2/3}{\draw[->,thick] (t\i)--(t\j);}
+\end{tikzpicture}
