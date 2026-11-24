@@ -1,0 +1,6 @@
+\begin{tikzpicture}[>=Stealth,node distance=6mm,font=\small]
+\node[draw,rounded corners,fill=mbpale,minimum width=2.1cm,minimum height=9mm] (p) {Условие $P$};
+\node[right=of p,draw,rounded corners,fill=mbcream,minimum width=3cm,minimum height=9mm] (a) {Правило перехода};
+\node[right=of a,draw,rounded corners,fill=mbpale,minimum width=2.1cm,minimum height=9mm] (q) {Вывод $Q$};
+\draw[->,very thick] (p)--(a);\draw[->,very thick] (a)--(q);
+\end{tikzpicture}
