@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=.85,font=\small]
+\coordinate (A) at (-2,0);\coordinate (B) at (2,0);\coordinate (C) at (1,2);\coordinate (D) at (-1,2);
+\draw[very thick,mbaccent] (A)--(B)--(C)--(D)--cycle;
+\draw[dashed,mbgold] (A)--(C) (B)--(D);
+\foreach \p/\pos in {A/below left,B/below right,C/above right,D/above left}{\fill (\p) circle(2pt) node[\pos]{$\p$};}
+\node[anchor=west,text width=5cm] at (3,1) {Равные диагонали\\$AC=BD=\sqrt{13}$\\Трапеция всё же не прямоугольник};
+\end{tikzpicture}

@@ -1,0 +1,7 @@
+\begin{tikzpicture}[>=Stealth,font=\small]
+\node[draw,rounded corners,fill=mbpale] (x) at (0,0) {$x^2+2x+1$};
+\node[draw,rounded corners,fill=mbcream] (y) at (3.6,0) {$(x+1)^2$};
+\node[draw,rounded corners,fill=mbpale] (z) at (7.4,0) {$\ge0$};
+\draw[->,thick] (x)--node[above,font=\scriptsize]{тождество}(y);
+\draw[->,thick] (y)--node[above,font=\scriptsize]{квадрат}(z);
+\end{tikzpicture}

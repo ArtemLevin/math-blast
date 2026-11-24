@@ -1,0 +1,7 @@
+\begin{tikzpicture}[font=\small]
+\draw[mbaccent,very thick] (0,0) ellipse (4.3cm and 1.5cm);
+\draw[mbgold,very thick] (-.8,0) ellipse (2.9cm and 1.15cm);
+\draw[mbpurple,very thick] (-1.8,0) ellipse (1.45cm and .72cm);
+\node at (-2,0) {$\mathbb N$};\node at (.0,.2) {$\mathbb Z$};\node at (3,.5) {$\mathbb R$};
+\node[below] at (0,-1.75) {Одна формула — разные множества допустимых значений};
+\end{tikzpicture}

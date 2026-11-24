@@ -1,0 +1,6 @@
+\begin{tikzpicture}[>=Stealth,font=\small]
+\node[draw,rounded corners,fill=mbpale] (a) at (0,0) {$x>5$};
+\node[draw,rounded corners,fill=mbpale] (b) at (4,0) {$x>3$};
+\draw[->,very thick,mbaccent] (a)--node[above]{верно}(b);
+\draw[->,dashed,mbgold] (b) to[bend left=35] node[below]{обратно — ложь при $x=4$}(a);
+\end{tikzpicture}

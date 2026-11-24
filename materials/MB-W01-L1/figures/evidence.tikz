@@ -1,0 +1,7 @@
+\begin{tikzpicture}[>=Stealth,font=\small,node distance=1.0cm]
+\node[draw=mbaccent,rounded corners=3pt,fill=mbpale,minimum width=3.7cm,minimum height=0.9cm] (a) {Наблюдения: 1, 2, 3, \dots};
+\node[draw=mbgold,rounded corners=3pt,fill=mbcream,right=1.3cm of a,minimum width=4.5cm,minimum height=0.9cm] (b) {Общий механизм: $n+n+1=2n+1$};
+\draw[->,thick] (a)--node[above,font=\scriptsize]{ищем правило}(b);
+\node[below=5mm of a,text width=3.7cm,align=center,font=\scriptsize]{Примеры помогают заметить закономерность};
+\node[below=5mm of b,text width=4.5cm,align=center,font=\scriptsize]{Цепочка равенств доказывает её для всех $n$};
+\end{tikzpicture}
