@@ -1,0 +1,7 @@
+\begin{tikzpicture}[>=Stealth,node distance=4mm,font=\small]
+\node[draw,rounded corners,fill=mbpale,minimum width=3.5cm,minimum height=8mm] (x) {$\forall a\in\mathbb Z$};
+\node[below=of x,draw,rounded corners,fill=mbcream,minimum width=3.5cm,minimum height=8mm] (y) {$\exists b=a+1$};
+\node[below=of y,draw,rounded corners,fill=mbpale,minimum width=3.5cm,minimum height=8mm] (z) {$b>a$};
+\draw[->] (x)--(y);\draw[->] (y)--(z);
+\node[anchor=west,text width=6cm] at (2,-.55) {Сначала выбирают произвольный $a$; затем можно построить подходящий $b$.};
+\end{tikzpicture}
