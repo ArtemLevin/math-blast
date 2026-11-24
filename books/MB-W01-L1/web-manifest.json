@@ -11,7 +11,7 @@
   "book_pdf_sha256": "fe75315c7c6097a9e05587a8dc11b41990be03433c91885f06268c06faba05cf",
   "web_revision": "a10765683bb118ed15a04249cb67f1b79527f0d0f6b4a0bd5aa2578415b174f3",
   "web_status": "PREVIEW",
-  "manual_status": "DRAFT",
+  "manual_status": "APPROVED",
   "date": "2026-11-20",
   "theory_section_ids": [
     "theory-01",
@@ -606,5 +606,23 @@
     "algorithm-09"
   ],
   "source_count": 6,
-  "notes": "Preview only until 02_REVIEW_MANUAL.md independent review approves PDF. Student progress stored under separate namespace."
+  "notes": "Утверждённый PDF находится в main (PR #1 merged). Веб-версия прошла 70 регрессионных и 35 real-HTTP тестов на GitHub Actions, автоматический axe-core без нарушений, 22 SVG в печати. Публичный Pages URL и postdeploy E2E ожидают включения GitHub Pages владельцем репозитория.",
+  "manual_review_date": "2026-11-24",
+  "manual_approved_pdf_sha256": "fe75315c7c6097a9e05587a8dc11b41990be03433c91885f06268c06faba05cf",
+  "release_gate": "PAGES_NOT_ENABLED",
+  "review_revision_date": "2026-11-24",
+  "browser_ci": {
+    "regression": "70/70 PASS",
+    "real_http": "35/35 PASS",
+    "axe_wcag_tagged_violations": 0,
+    "print_svg": "22/22",
+    "print_pages_A4": 141,
+    "run_id": 45393787068
+  },
+  "publication": {
+    "github_pages_enabled": false,
+    "release_workflow": ".github/workflows/pages.yml",
+    "live_e2e_script": "qa/e2e_pages.py",
+    "deployed_url": null
+  }
 }
