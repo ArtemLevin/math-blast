@@ -90,6 +90,31 @@ try:
         ck('All six bibliography entries rendered',page.locator('.source').count()==6)
         ck('No JavaScript exceptions',not errors,errors[:5])
         page.screenshot(path=str(QA/'desktop.png'),full_page=False)
+        # Legacy main plan must still export and import the same completed lesson IDs.
+        plan=context.new_page()
+        plan.on('dialog',lambda dialog:dialog.accept())
+        plan_response=plan.goto(BASE+'/index.html',wait_until='domcontentloaded',timeout=60000)
+        ck('Main plan HTTP 200',plan_response is not None and plan_response.status==200)
+        plan.evaluate("""()=>localStorage.setItem('olympiad_math_plan_v2',JSON.stringify({done:{1:true,144:true},ratings:{0:4},theme:'dark'}))""")
+        plan.reload(wait_until='domcontentloaded',timeout=60000)
+        ck('Main plan restores both marked lessons',plan.evaluate("Object.keys(JSON.parse(localStorage.getItem('olympiad_math_plan_v2')).done).length===2"))
+        with plan.expect_download() as download_info:
+            plan.locator('#export-button').click()
+        downloaded=download_info.value
+        export_path=QA/'legacy-progress-export.json'
+        downloaded.save_as(str(export_path))
+        exported=json.loads(export_path.read_text())
+        ck('Legacy progress export preserves lesson 1 and 144',exported.get('completedLessons')==[1,144])
+        ck('Legacy competency export preserves ratings',4 in exported.get('competencies',{}).values())
+        plan.evaluate("""()=>localStorage.setItem('olympiad_math_plan_v2',JSON.stringify({done:{},ratings:{},theme:'light'}))""")
+        plan.reload(wait_until='domcontentloaded',timeout=60000)
+        plan.locator('#import-file').set_input_files(str(export_path))
+        plan.wait_for_timeout(350)
+        recovered=plan.evaluate("JSON.parse(localStorage.getItem('olympiad_math_plan_v2'))")
+        ck('Legacy import restores both lesson flags',bool(recovered['done'].get('1') and recovered['done'].get('144')))
+        ck('Legacy import restores competency 0',recovered['ratings'].get('0')==4)
+        ck('Book progress unaffected by main plan import',page.evaluate("!!localStorage.getItem('mathblast_book_progress_v1:MB-W01-L1')"))
+        plan.close()
         # Axe is installed by CI: npm install --no-save axe-core
         axe=ROOT/'node_modules/axe-core/axe.min.js'
         if axe.exists():
