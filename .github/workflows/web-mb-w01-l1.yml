@@ -1,5 +1,12 @@
 name: MB-W01-L1 — Web QA
 on:
+  push:
+    branches:
+      - feature/MB-W01-L1-web-preview-20261120
+    paths:
+      - 'books/MB-W01-L1/**'
+      - 'qa/**'
+      - '.github/workflows/web-mb-w01-l1.yml'
   pull_request:
     paths:
       - 'books/MB-W01-L1/**'
