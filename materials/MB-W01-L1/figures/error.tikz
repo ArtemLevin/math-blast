@@ -1,0 +1,5 @@
+\begin{tikzpicture}[>=Stealth,font=\small]
+\node[draw,fill=mbpale,rounded corners,minimum width=3cm] (a) {$a=b$};
+\node[draw,fill=mbcream,rounded corners,right=1cm of a,minimum width=4.4cm] (b) {$a-b=0$: делить нельзя};
+\draw[->,very thick,mbgold] (a)--node[above,font=\scriptsize]{проверка}(b);
+\end{tikzpicture}

@@ -1,0 +1,3 @@
+\begin{tikzpicture}[font=\small]
+\foreach \x/\t/\s in {0/ИСТИНА/Есть обоснование,3.2/ЛОЖЬ/Есть контрпример,6.4/НЕ ИЗВЕСТНО/Нужен поиск}{\node[draw,rounded corners,fill=mbpale,minimum width=2.8cm,minimum height=.9cm] at (\x,0) {\t};\node[text width=2.8cm,align=center,font=\scriptsize] at (\x,-.85) {\s};}
+\end{tikzpicture}

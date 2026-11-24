@@ -1,0 +1,1926 @@
+{
+  "book_id": "MB-W01-L1",
+  "review_date": "2026-11-24",
+  "pdf_sha256": "fe75315c7c6097a9e05587a8dc11b41990be03433c91885f06268c06faba05cf",
+  "canonical_json_sha256": "0c91c8cd3ce9e20f27966ea04e391c48acd9c40280948e2d84ae79f94b94991e",
+  "reviewed_total": 159,
+  "reviewed_examples": 30,
+  "reviewed_practice": 90,
+  "reviewed_minis": 39,
+  "unverified": [],
+  "issue_ids": [],
+  "scope_note": "Mathematical and logical arguments and corresponding answers manually examined during independent reviews on 2026-11-20 and 2026-11-24. Programmatic checks establish only structural and selected algebraic cases. Do not interpret this ledger as a proof of copyright clearance for any external text.",
+  "items": [
+    {
+      "id": "MB-W01-L1-EX-A-001",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-A-002",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-A-003",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-A-004",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-A-005",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-A-006",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-A-007",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-A-008",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-A-009",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-A-010",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-B-011",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-B-012",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-B-013",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-B-014",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-B-015",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-B-016",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-B-017",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-B-018",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-B-019",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-B-020",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-C-021",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-C-022",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-C-023",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-C-024",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-C-025",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-C-026",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-C-027",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-D-028",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-D-029",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-EX-D-030",
+      "kind": "worked_example",
+      "status": "verified",
+      "evidence": [
+        "manual_logic_review",
+        "id_present_in_pdf",
+        "source_parity"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-001",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-002",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-003",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-004",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-005",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-006",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-007",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-008",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-009",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-010",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-011",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-012",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-013",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-014",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-015",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-016",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-017",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-018",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-019",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-020",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-021",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-022",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-023",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-024",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-025",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-026",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-027",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-028",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-029",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-A-030",
+      "kind": "practice",
+      "level": "A",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-031",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-032",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-033",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-034",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-035",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-036",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-037",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-038",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-039",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-040",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-041",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-042",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-043",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-044",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-045",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-046",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-047",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-048",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-049",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-050",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-051",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-052",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-053",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-054",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-055",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-056",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-057",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-058",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-059",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-B-060",
+      "kind": "practice",
+      "level": "B",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-061",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-062",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-063",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-064",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-065",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-066",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-067",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-068",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-069",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-070",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-071",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-072",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-073",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-074",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-075",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-076",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-077",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-078",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-079",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-C-080",
+      "kind": "practice",
+      "level": "C",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-D-081",
+      "kind": "practice",
+      "level": "D",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-D-082",
+      "kind": "practice",
+      "level": "D",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-D-083",
+      "kind": "practice",
+      "level": "D",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-D-084",
+      "kind": "practice",
+      "level": "D",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-D-085",
+      "kind": "practice",
+      "level": "D",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-D-086",
+      "kind": "practice",
+      "level": "D",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-D-087",
+      "kind": "practice",
+      "level": "D",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-D-088",
+      "kind": "practice",
+      "level": "D",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-D-089",
+      "kind": "practice",
+      "level": "D",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-PR-D-090",
+      "kind": "practice",
+      "level": "D",
+      "status": "verified",
+      "evidence": [
+        "manual_solution_and_answer_review",
+        "unique_id",
+        "exactly_two_hints",
+        "full_solution",
+        "table_answer",
+        "id_present_in_pdf"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-01-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-01-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-01-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-02-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-02-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-02-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-03-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-03-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-03-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-04-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-04-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-04-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-05-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-05-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-05-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-06-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-06-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-06-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-07-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-07-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-07-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-08-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-08-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-08-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-09-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-09-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-09-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-10-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-10-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-10-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-11-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-11-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-11-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-12-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-12-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-12-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-13-1",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-13-2",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    },
+    {
+      "id": "MB-W01-L1-MINI-13-3",
+      "kind": "mini_exercise",
+      "status": "verified",
+      "evidence": [
+        "manual_prompt_answer_check",
+        "unique_position"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+\begin{tikzpicture}[font=\small]
+\foreach \i/\x in {0/0,1/1,2/2}{\node[draw,circle,minimum size=9mm,fill=mbpale] (p\i) at (\i*1.4,0) {$\x$};\node[below=3mm of p\i] {$\x^2$};}
+\draw[decorate,decoration={brace,amplitude=5pt},thick] (-.5,.65)--(3.3,.65) node[midway,above=7pt]{Проверены все элементы конечной области};
+\node[anchor=west,align=left] at (4,0) {Полный перебор: 3 случая\\Бесконечная область: требуется общий довод};
+\end{tikzpicture}
