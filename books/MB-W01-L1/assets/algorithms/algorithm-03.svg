@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t3 d3" viewBox="0 0 920 610" width="920" height="610">
+<title id="t3">Прямое доказательство и контрпример</title><desc id="d3">Выбор способа. Выделите квантор и заключение. Вопрос: Требуется «для всех»?. Да: Возьмите произвольный объект. Нет: Поищите допустимый контрпример. Итог: Запишите общий аргумент или опровержение.</desc>
+<style>.text{font: 19px 'DejaVu Sans',Arial,sans-serif;fill:#243447} .small{font:16px 'DejaVu Sans',Arial,sans-serif;fill:#486780} .box{fill:#fff;stroke:#bac9d4;stroke-width:1.6} .major{stroke:#486780;stroke-width:1.9} .line{fill:none;stroke:#486780;stroke-width:2.1} </style>
+<defs><marker id="arr" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8" fill="none" stroke="#486780" stroke-width="1.2"/></marker></defs>
+<ellipse cx="460" cy="54" rx="205" ry="40" class="box major"/><text x="460" y="61" text-anchor="middle" class="text">Выбор способа</text>
+<path class="line" marker-end="url(#arr)" d="M460 94 V119"/>
+<rect x="233" y="124" width="454" height="72" rx="13" class="box"/><text x="460" y="166" text-anchor="middle" class="text">Выделите квантор и заключение</text>
+<path class="line" marker-end="url(#arr)" d="M460 197 V231"/>
+<polygon points="460,228 660,307 460,386 260,307" class="box major"/><text x="460" y="315" text-anchor="middle" class="text">Требуется «для всех»?</text>
+<path class="line" marker-end="url(#arr)" d="M260 307 H185 V395"/><text x="195" y="292" class="small">да</text>
+<path class="line" marker-end="url(#arr)" d="M660 307 H736 V395"/><text x="686" y="292" class="small">нет</text>
+<rect x="30" y="400" width="312" height="95" rx="12" class="box"/><text x="186" y="440" text-anchor="middle" class="text">Возьмите произвольный</text><text x="186" y="462" text-anchor="middle" class="text">объект</text>
+<rect x="576" y="400" width="312" height="95" rx="12" class="box"/><text x="732" y="440" text-anchor="middle" class="text">Поищите допустимый</text><text x="732" y="462" text-anchor="middle" class="text">контрпример</text>
+<path class="line" marker-end="url(#arr)" d="M186 495 V519 H420 V527"/>
+<path class="line" marker-end="url(#arr)" d="M732 495 V519 H500 V527"/>
+<ellipse cx="460" cy="566" rx="222" ry="39" class="box major"/><text x="460" y="562" text-anchor="middle" class="text">Запишите общий аргумент или</text><text x="460" y="584" text-anchor="middle" class="text">опровержение</text>
+</svg>

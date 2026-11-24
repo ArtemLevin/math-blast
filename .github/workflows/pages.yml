@@ -1,0 +1,84 @@
+name: Math Blast — publish approved book website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'books/MB-W01-L1/**'
+      - 'materials/MB-W01-L1/book.pdf'
+      - 'qa/e2e_pages.py'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: math-blast-pages
+  cancel-in-progress: false
+
+jobs:
+  build-pages:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble exact static site
+        run: |
+          mkdir -p _pages/books _pages/materials/MB-W01-L1
+          cp index.html _pages/index.html
+          cp -r books/MB-W01-L1 _pages/books/
+          cp materials/MB-W01-L1/book.pdf _pages/materials/MB-W01-L1/book.pdf
+          touch _pages/.nojekyll
+          test -s _pages/index.html
+          test -s _pages/books/MB-W01-L1/index.html
+          test -s _pages/books/MB-W01-L1/vendor/mathjax-tex-svg-full.js
+          echo 'fe75315c7c6097a9e05587a8dc11b41990be03433c91885f06268c06faba05cf  _pages/materials/MB-W01-L1/book.pdf' | sha256sum -c -
+          echo '0c91c8cd3ce9e20f27966ea04e391c48acd9c40280948e2d84ae79f94b94991e  _pages/books/MB-W01-L1/content.json' | sha256sum -c -
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _pages
+
+  deploy-pages:
+    needs: build-pages
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  verify-public-url:
+    needs: deploy-pages
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      PAGES_BASE_URL: ${{ needs.deploy-pages.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Browser and axe dependencies
+        run: |
+          python -m pip install 'playwright==1.56.0'
+          python -m playwright install --with-deps chromium
+          npm install --no-save axe-core@4.10.3
+      - name: Live published HTTPS E2E
+        run: python qa/e2e_pages.py
+      - name: Upload deployment QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MB-W01-L1-pages-live-qa
+          if-no-files-found: warn
+          path: qa/pages-results/

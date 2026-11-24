@@ -1,0 +1,51 @@
+name: MB-W01-L1 — Web QA
+on:
+  push:
+    branches:
+      - feature/MB-W01-L1-web-preview-20261120
+    paths:
+      - 'books/MB-W01-L1/**'
+      - 'qa/**'
+      - '.github/workflows/web-mb-w01-l1.yml'
+  pull_request:
+    paths:
+      - 'books/MB-W01-L1/**'
+      - 'qa/test_web.py'
+      - 'qa/e2e_http.py'
+      - 'qa/MB-W01-L1-web-results.json'
+      - '.github/workflows/web-mb-w01-l1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-parity-a11y-print:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser testing tools
+        run: |
+          python -m pip install 'PyMuPDF==1.26.7' 'playwright==1.56.0'
+          python -m playwright install --with-deps chromium
+          npm install --no-save axe-core@4.10.3
+      - name: Regression, 70 checks
+        run: python qa/test_web.py
+      - name: Real HTTP, storage, automated WCAG and PDF with all 22 SVG
+        run: python qa/e2e_http.py
+      - name: Save audit evidence and rendered print PDF
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MB-W01-L1-web-e2e-qa
+          if-no-files-found: warn
+          path: |
+            qa/MB-W01-L1-web-results.json
+            qa/http-results/
