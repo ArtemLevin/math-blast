@@ -1,0 +1,8 @@
+\begin{tikzpicture}[>=Stealth,font=\small]
+\node[draw,rounded corners] (n) at (0,0) {$n\in\mathbb Z$};
+\node[draw,rounded corners,fill=mbpale] (p) at (-2.6,-1.5) {$n\ge0$};
+\node[draw,rounded corners,fill=mbcream] (m) at (2.6,-1.5) {$n\le-1$};
+\node[draw,rounded corners] (pp) at (-2.6,-3) {$n(n+1)\ge0$};
+\node[draw,rounded corners] (mm) at (2.6,-3) {$n(n+1)\ge0$};
+\draw[->] (n)--(p);\draw[->] (n)--(m);\draw[->] (p)--(pp);\draw[->] (m)--(mm);
+\end{tikzpicture}
