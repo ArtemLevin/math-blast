@@ -120,7 +120,7 @@ function schematic(f){
  graph(v,ss,{x:48,y:36,w:370,h:228},{xLabel:'t, '+(unit[f.x_unit]||(f.kind==='periodic_departure'?'ч':'с')),yLabel:'x, '+(unit[f.y_unit]||(f.kind==='periodic_departure'?'км':'м')),labels:ss.length<=4});
  }else if(f.kind==='perpendicular_paths'){
  const [a,b]=f.speeds,t=f.distance/Math.hypot(a,b),l1=a*t,l2=b*t,k=215/Math.max(l1,l2);const x=65,y=252;
- line(v,x,y,398,y);line(v,x,y,x,25);line(v,x+l1*k,y,x,y-l2*k,'var(--accent)',2);point(v,x+l1*k,y,'var(--blue)');point(v,x,y-l2*k,'var(--orange)');label(v,x+12,y+25,'O');label(v,x+40,y+25,'S₁ = '+fnum(l1)+' м');label(v,x+12,31,'S₂ = '+fnum(l2)+' м');label(v,x+45,145,'L = '+f.distance+' м');label(v,200,291,'Прямоугольный треугольник');
+ line(v,x,y,398,y);line(v,x,y,x,25);line(v,x+l1*k,y,x,y-l2*k,'var(--accent)',2);point(v,x+l1*k,y,'var(--blue)');point(v,x,y-l2*k,'var(--orange)');label(v,x+12,y+25,'O');label(v,x+40,y+25,'S₁');label(v,x+12,31,'S₂');label(v,x+45,145,'L = '+f.distance+' м');label(v,200,291,'Прямоугольный треугольник · условная схема');
  }else if(f.kind==='velocity_components'){
  const a=f.angle_deg*Math.PI/180,x=55,y=260,X=x+220*Math.cos(a),Y=y-220*Math.sin(a);line(v,x,y,400,y);line(v,x,y,x,25);line(v,x,y,X,Y,'var(--blue)',3);line(v,X,Y,X,y,'var(--muted)',1,'4 4');line(v,X,Y,x,Y,'var(--muted)',1,'4 4');label(v,X+8,Y,'v');label(v,X,y+20,'vₓ');label(v,x+5,Y-8,'vᵧ');label(v,x+42,y-15,f.angle_deg+'°');
  }else if(f.kind==='sliding_rod'){
