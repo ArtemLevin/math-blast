@@ -1,0 +1,66 @@
+name: MB-W01-L1 — PDF QA
+on:
+  pull_request:
+    paths:
+      - 'materials/MB-W01-L1/**'
+      - '.github/workflows/manual-mb-w01-l1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-pdf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    defaults:
+      run:
+        working-directory: materials/MB-W01-L1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install LaTeX and Python dependencies
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends texlive-latex-base texlive-latex-extra texlive-lang-cyrillic texlive-pictures texlive-fonts-recommended texlive-fonts-extra
+          python -m pip install 'PyMuPDF==1.26.7'
+      - name: Record checked-in source checksums
+        run: |
+          sha256sum book.tex content/book.json book.pdf
+          echo '8f2a48d5fde224a9677096e3084dd29a4f53ea9f8fc6c8126adb41d9e68805ba  book.tex' | sha256sum -c -
+          echo '0c91c8cd3ce9e20f27966ea04e391c48acd9c40280948e2d84ae79f94b94991e  content/book.json' | sha256sum -c -
+          echo 'fe75315c7c6097a9e05587a8dc11b41990be03433c91885f06268c06faba05cf  book.pdf' | sha256sum -c -
+      - name: Rebuild from generator
+        run: |
+          cp book.pdf /tmp/mathblast_reference_MB-W01-L1.pdf
+          python build_book.py --compile
+          echo '8f2a48d5fde224a9677096e3084dd29a4f53ea9f8fc6c8126adb41d9e68805ba  book.tex' | sha256sum -c -
+          echo '0c91c8cd3ce9e20f27966ea04e391c48acd9c40280948e2d84ae79f94b94991e  content/book.json' | sha256sum -c -
+      - name: Run content and style QA
+        run: |
+          python qa/check_book.py
+          python qa/check_style33.py
+      - name: Compare rebuilt PDF content with reference
+        run: |
+          python - <<'PY'
+          import fitz
+          source=fitz.open('/tmp/mathblast_reference_MB-W01-L1.pdf')
+          rebuilt=fitz.open('book.pdf')
+          assert len(source)==len(rebuilt)==121, (len(source),len(rebuilt))
+          assert all(abs(page.rect.width-595.276)<1 and abs(page.rect.height-841.89)<1 for page in rebuilt)
+          bad=[i+1 for i in range(121) if source[i].get_text()!=rebuilt[i].get_text()]
+          assert not bad, f'Unmatched extracted text on pages: {bad}'
+          print('121/121 A4 pages and textual parity: PASS')
+          PY
+      - name: Upload PDF and check reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MB-W01-L1-pdf-qa
+          path: |
+            materials/MB-W01-L1/book.pdf
+            materials/MB-W01-L1/book.log
+            materials/MB-W01-L1/qa/check-results.json
+            materials/MB-W01-L1/qa/style33-results.json
