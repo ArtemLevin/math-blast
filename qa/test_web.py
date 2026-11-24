@@ -32,7 +32,7 @@ check('All sources mapped',len(SRC['sources'])==len(M['source_count'] if isinsta
 check('Main-plan progress key absent from book scripts','olympiad_math_plan_v2' not in (WEB/'app.js').read_text())
 html=(WEB/'index.html').read_text();app=(WEB/'app.js').read_text();css=(WEB/'app.css').read_text();math=(WEB/'vendor/mathjax-tex-svg-full.js').read_text()
 with sync_playwright() as pw:
- browser=pw.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox','--disable-dev-shm-usage'])
+ browser=pw.chromium.launch(executable_path='/usr/bin/chromium' if pathlib.Path('/usr/bin/chromium').exists() else None,headless=True,args=['--no-sandbox','--disable-dev-shm-usage'])
  page=browser.new_page(viewport={'width':1440,'height':900},device_scale_factor=1)
  page.on('pageerror',lambda e:ERRORS.append(str(e)))
  page.set_content(html,wait_until='domcontentloaded');page.add_style_tag(content=css);page.evaluate("Object.defineProperty(window,'localStorage',{configurable:true,value:{_data:{},setItem(k,v){this._data[k]=String(v)},getItem(k){return Object.prototype.hasOwnProperty.call(this._data,k)?this._data[k]:null},removeItem(k){delete this._data[k]}}})");page.add_script_tag(content=math);page.add_script_tag(content=app);page.wait_for_timeout(900)
