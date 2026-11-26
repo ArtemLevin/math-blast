@@ -36,7 +36,7 @@ function el(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=
 function add(parent,tag,cls,txt){const e=el(tag,cls,txt);parent.append(e);return e}
 const M='http://www.w3.org/1998/Math/MathML';
 function m(tag,txt){const e=document.createElementNS(M,tag);if(txt!==undefined)e.textContent=txt;return e}
-const symbols={Delta:'Δ',delta:'δ',omega:'ω',alpha:'α',beta:'β',phi:'φ',pi:'π',theta:'θ',lambda:'λ',mu:'μ',rho:'ρ',tau:'τ',sigma:'σ',nu:'ν',gamma:'γ',varepsilon:'ε',cdot:'·',times:'×',pm:'±',le:'≤',leq:'≤',ge:'≥',geq:'≥',ne:'≠',approx:'≈',infty:'∞',rightarrow:'→',circ:'°',sum:'∑',perp:'⊥',lfloor:'⌊',rfloor:'⌋'};
+const symbols={Delta:'Δ',delta:'δ',omega:'ω',alpha:'α',beta:'β',phi:'φ',varphi:'φ',pi:'π',theta:'θ',lambda:'λ',mu:'μ',rho:'ρ',tau:'τ',sigma:'σ',nu:'ν',gamma:'γ',varepsilon:'ε',cdot:'·',times:'×',pm:'±',le:'≤',leq:'≤',ge:'≥',geq:'≥',ne:'≠',approx:'≈',infty:'∞',rightarrow:'→',circ:'°',sum:'∑',perp:'⊥',lfloor:'⌊',rfloor:'⌋'};
 function mathNode(source){
  let i=0; const s=String(source).trim();const row=()=>m('mrow');
  function group(){while(/\s/.test(s[i]||'x'))i++;if(s[i]==='{'){i++;const r=parse('}');if(s[i]!=='}')throw Error('unclosed');i++;return r}return atom()}
