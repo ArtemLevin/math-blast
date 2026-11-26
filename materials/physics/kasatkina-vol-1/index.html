@@ -60,7 +60,7 @@ function el(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=
 function add(parent,tag,cls,txt){const e=el(tag,cls,txt);parent.append(e);return e}
 const M='http://www.w3.org/1998/Math/MathML';
 function m(tag,txt){const e=document.createElementNS(M,tag);if(txt!==undefined)e.textContent=txt;return e}
-const symbols={Delta:'Δ',delta:'δ',omega:'ω',alpha:'α',beta:'β',phi:'φ',pi:'π',theta:'θ',lambda:'λ',mu:'μ',rho:'ρ',tau:'τ',sigma:'σ',nu:'ν',gamma:'γ',varepsilon:'ε',cdot:'·',times:'×',pm:'±',le:'≤',leq:'≤',ge:'≥',geq:'≥',ne:'≠',approx:'≈',infty:'∞',rightarrow:'→',circ:'°',sum:'∑',int:'∫'};
+const symbols={Delta:'Δ',delta:'δ',omega:'ω',alpha:'α',beta:'β',phi:'φ',pi:'π',theta:'θ',lambda:'λ',mu:'μ',rho:'ρ',tau:'τ',sigma:'σ',nu:'ν',gamma:'γ',varepsilon:'ε',cdot:'·',times:'×',pm:'±',le:'≤',leq:'≤',ge:'≥',geq:'≥',ne:'≠',approx:'≈',infty:'∞',rightarrow:'→',circ:'°',sum:'∑',lfloor:'⌊',rfloor:'⌋',int:'∫'};
 function mathNode(source){
  let i=0; const s=String(source).trim();const row=()=>m('mrow');
  function group(){while(/\s/.test(s[i]||'x'))i++;if(s[i]==='{'){i++;const r=parse('}');if(s[i]!=='}')throw Error('unclosed');i++;return r}return atom()}
@@ -71,7 +71,7 @@ function mathNode(source){
  if(cmd==='sqrt'){const a=m('msqrt');a.append(group());return a}
  if(cmd==='vec'||cmd==='overline'||cmd==='hat'){const a=m('mover');a.setAttribute('accent','true');a.append(group(),m('mo',cmd==='vec'?'→':cmd==='hat'?'^':'¯'));return a}
  if(cmd==='left'||cmd==='right')return atom();
- if(['sin','cos','tan','arctan','ln','log','exp','arcsin','arccos'].includes(cmd)){const a=m('mi',cmd);a.setAttribute('mathvariant','normal');return a}
+ if(['sin','cos','tan','cot','arctan','ln','log','exp','arcsin','arccos'].includes(cmd)){const a=m('mi',cmd);a.setAttribute('mathvariant','normal');return a}
  if(cmd==='text'||cmd==='mathrm'||cmd==='operatorname'){if(s[i++]!=='{')throw Error('text');let start=i;while(i<s.length&&s[i]!=='}')i++;if(i===s.length)throw Error('text');const a=m('mtext',s.slice(start,i));i++;return a}
  if(symbols[cmd])return m(['cdot','times','pm','le','leq','ge','geq','ne','approx','rightarrow','circ','sum','int'].includes(cmd)?'mo':'mi',symbols[cmd]);
  throw Error('Unsupported command '+cmd)}
