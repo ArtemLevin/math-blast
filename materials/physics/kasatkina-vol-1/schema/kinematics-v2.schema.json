@@ -169,7 +169,7 @@
                 },
                 "ref": {
                   "type": "string",
-                  "pattern": "\\S"
+                  "description": "Optional printed figure reference; empty string is permitted for editorial figures."
                 }
               },
               "required": [
@@ -362,7 +362,7 @@
                 },
                 "ref": {
                   "type": "string",
-                  "pattern": "\\S"
+                  "description": "Optional printed figure reference; empty string is permitted for editorial figures."
                 }
               },
               "required": [
