@@ -4,6 +4,8 @@
 const fs=require('node:fs'),path=require('node:path');
 const PREFIX='materials/physics/kasatkina-vol-1/';
 const pad=n=>String(n).padStart(2,'0');
+// Existing task IDs are immutable; new IDs may be appended, removals require explicit review.
+const BASELINE_COUNTS={ '01':[7,8], '02':[12,10], '03':[23,23], '04':[18,22], '05':[20,28], '06':[19,19], '07':[21,24], '08':[7,6], '07-supplement':[10,14] };
 function canonical(v){if(Array.isArray(v))return v.map(canonical);if(v&&typeof v==='object')return Object.fromEntries(Object.keys(v).sort().map(k=>[k,canonical(v[k])]));return v}
 function equal(a,b){return JSON.stringify(canonical(a))===JSON.stringify(canonical(b))}
 function schemaErrors(value,rule,where='$'){
@@ -51,7 +53,9 @@ function validate(files,schema,options={}){
   if(j.chapter.number!==chapter)add(bank,'chapter number differs from filename');
   if(author&&(chapter!==7||j.source.type!=='original_exercises'))add(bank,'invalid author source metadata');
   if(j.chapter.printed_pages&&j.chapter.printed_pages[0]>j.chapter.printed_pages[1])add(bank,'printed page range reversed');
-  const counts={worked:0,practice:0};
+  const counts={worked:0,practice:0},bankIds=new Set(j.tasks.map(t=>t.id));
+  const baseline=BASELINE_COUNTS[m[1]+(author?'-supplement':'')];
+  if(baseline)for(let k=0;k<2;k++)for(let n=1;n<=baseline[k];n++){const id=[author?'MB':'KAS1',m[1],k===0?'W':'P',pad(n)].join('-');if(!bankIds.has(id))add(bank,'missing baseline ID '+id)}
   for(const t of j.tasks){
    const id=t.id,kind=t.kind==='worked'?'W':'P';counts[t.kind]++;stats.tasks++;stats[t.kind]++;stats[author?'author':'main']++;
    if(ids.has(id))add(bank,'duplicate global ID '+id);ids.add(id);
@@ -92,8 +96,10 @@ function validate(files,schema,options={}){
 function readInputs(){
  const dir=path.resolve(__dirname,'..'),root=path.resolve(dir,'../../..');
  const files={'index.html':fs.readFileSync(path.join(root,'index.html'),'utf8')};
+ const knownPaths=['index.html'];
+ function walk(current){for(const e of fs.readdirSync(current,{withFileTypes:true})){const full=path.join(current,e.name);if(e.isDirectory())walk(full);else if(e.isFile())knownPaths.push(path.relative(root,full).split(path.sep).join('/'))}}walk(dir);
  for(const n of fs.readdirSync(dir)){if(/^(index|chapter-\d{2})\.html$|^chapter-\d{2}(-supplement)?\.json$|^(README|ROADMAP|AGENTS|methodological-standard-v2|methodological-review-kinematics)\.md$/.test(n))files[PREFIX+n]=fs.readFileSync(path.join(dir,n),'utf8')}
- return {files,schema:JSON.parse(fs.readFileSync(path.join(dir,'schema/kinematics-v2.schema.json'),'utf8'))};
+ return {files,schema:JSON.parse(fs.readFileSync(path.join(dir,'schema/kinematics-v2.schema.json'),'utf8')),options:{knownPaths}};
 }
-if(require.main===module){const {files,schema}=readInputs();const report=validate(files,schema);console.log(JSON.stringify(report,null,2));if(report.status!=='PASS')process.exitCode=1}
+if(require.main===module){const {files,schema,options}=readInputs();const report=validate(files,schema,options);console.log(JSON.stringify(report,null,2));if(report.status!=='PASS')process.exitCode=1}
 module.exports={validate,readInputs,schemaErrors};
