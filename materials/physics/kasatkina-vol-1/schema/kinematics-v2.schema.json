@@ -1,0 +1,459 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://artemlevin.github.io/math-blast/materials/physics/kasatkina-vol-1/schema/kinematics-v2.schema.json",
+  "title": "Math Blast Kinematics 2.0 bank",
+  "description": "Contract of current KIN banks; manual answers only until a checker is implemented. Cross-file checks in tests/validate-bank.cjs.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "source": {
+      "type": "object"
+    },
+    "chapter": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 28
+        },
+        "title": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "section": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "printed_pages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "number",
+        "title",
+        "section"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "worked": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "practice": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "statement_policy": {
+          "type": "string",
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "worked",
+        "practice",
+        "statement_policy"
+      ]
+    },
+    "methodological_standard": {
+      "const": "methodological-standard-v2.md"
+    },
+    "conventions": {
+      "type": "object"
+    },
+    "tasks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "chapter": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 28
+          },
+          "topic": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^(KAS1|MB)-[0-9]{2}-[WP]-[0-9]{2,}$"
+          },
+          "kind": {
+            "enum": [
+              "worked",
+              "practice"
+            ]
+          },
+          "number": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "subtopic": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "statement": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "given": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "\\S"
+            },
+            "minItems": 1
+          },
+          "find": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "\\S"
+            },
+            "minItems": 1
+          },
+          "formulas": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "\\S"
+            }
+          },
+          "solution": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "answer_source": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "answer": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "difficulty": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "competencies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "\\S"
+            },
+            "minItems": 1
+          },
+          "figures": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "type": "string",
+                  "pattern": "\\S"
+                },
+                "ref": {
+                  "type": "string",
+                  "pattern": "\\S"
+                }
+              },
+              "required": [
+                "kind"
+              ]
+            }
+          },
+          "source_pages": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "uniqueItems": true
+          },
+          "source_images": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "\\S"
+            },
+            "uniqueItems": true
+          },
+          "verification": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "statement_style": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "task_type": {
+            "enum": [
+              "concept",
+              "calculation",
+              "graph_reading",
+              "graph_construction",
+              "inverse",
+              "error_analysis",
+              "modeling",
+              "research"
+            ]
+          },
+          "primary_competency": {
+            "type": "string",
+            "pattern": "^KIN-(0[1-9]|1[0-2])$"
+          },
+          "competency_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^KIN-(0[1-9]|1[0-2])$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "prerequisites": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "\\S"
+            },
+            "minItems": 1
+          },
+          "hints": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "\\S"
+            },
+            "minItems": 3,
+            "maxItems": 3,
+            "uniqueItems": true
+          },
+          "solution_steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "pattern": "\\S"
+                },
+                "explanation": {
+                  "type": "string",
+                  "pattern": "\\S"
+                },
+                "math": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "explanation",
+                "math"
+              ]
+            },
+            "minItems": 1
+          },
+          "answer_spec": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "manual"
+              },
+              "parts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "pattern": "\\S"
+                    },
+                    "expected": {
+                      "type": "string",
+                      "pattern": "\\S"
+                    },
+                    "unit": {
+                      "type": "string",
+                      "pattern": "\\S"
+                    },
+                    "tolerance": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "label",
+                    "expected"
+                  ]
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "kind",
+              "parts"
+            ]
+          },
+          "rubric": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "criterion": {
+                  "type": "string",
+                  "pattern": "\\S"
+                },
+                "points": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "criterion",
+                "points"
+              ]
+            },
+            "minItems": 1
+          },
+          "pedagogical_role": {
+            "enum": [
+              "worked_example",
+              "guided_practice",
+              "independent_practice",
+              "diagnostic",
+              "extension"
+            ]
+          },
+          "review_status": {
+            "enum": [
+              "reviewed",
+              "needs_source_review",
+              "needs_revision"
+            ]
+          },
+          "solution_figures": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "type": "string",
+                  "pattern": "\\S"
+                },
+                "ref": {
+                  "type": "string",
+                  "pattern": "\\S"
+                }
+              },
+              "required": [
+                "kind"
+              ]
+            }
+          },
+          "alternative_exercise": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "statement": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "hints": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "\\S"
+                },
+                "minItems": 3,
+                "maxItems": 3,
+                "uniqueItems": true
+              },
+              "answer": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "solution": {
+                "type": "string",
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "title",
+              "statement",
+              "hints",
+              "answer",
+              "solution"
+            ]
+          },
+          "editorial_note": {
+            "type": "string",
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "chapter",
+          "topic",
+          "id",
+          "kind",
+          "number",
+          "subtopic",
+          "statement",
+          "given",
+          "find",
+          "formulas",
+          "solution",
+          "answer_source",
+          "answer",
+          "difficulty",
+          "competencies",
+          "figures",
+          "source_pages",
+          "source_images",
+          "verification",
+          "statement_style",
+          "task_type",
+          "primary_competency",
+          "competency_ids",
+          "prerequisites",
+          "hints",
+          "solution_steps",
+          "answer_spec",
+          "rubric",
+          "pedagogical_role",
+          "review_status"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "source",
+    "chapter",
+    "scope",
+    "methodological_standard",
+    "tasks"
+  ]
+}
