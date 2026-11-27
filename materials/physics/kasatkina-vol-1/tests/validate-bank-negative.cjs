@@ -20,6 +20,7 @@ function negativeFixtures(files,schema,options={}){
  ['duplicate global ID',x=>edit(x,bank,j=>j.tasks.push({...j.tasks[0]})),'duplicate global ID'],
  ['wrong number',x=>edit(x,bank,j=>j.tasks[0].number=99),'ID/chapter/kind/number mismatch'],
  ['wrong scope',x=>edit(x,bank,j=>j.scope.worked++),'scope.worked mismatch'],
+ ['deleted task with adjusted scope',x=>edit(x,bank,j=>{j.tasks.shift();j.scope.worked--}),'missing baseline ID MB-07-W-01'],
  ['author source contamination',x=>edit(x,bank,j=>j.tasks[0].source_pages=[1]),'author provenance mismatch'],
  ['unsafe scan reference',x=>edit(x,first,j=>j.tasks[0].source_images=['../bad.jpg']),'unsafe source image reference'],
  ['embedded mismatch',x=>{x[html]=x[html].replace(/^const SUPPLEMENT=.*;$/m,'const SUPPLEMENT={};')},'parity SUPPLEMENT differs'],
@@ -35,7 +36,7 @@ function negativeFixtures(files,schema,options={}){
  return cases.map(([name,mutate,expect])=>{const copy={...files},opts={...options};mutate(copy,opts);const result=validate(copy,schema,opts);const ok=result.status==='FAIL'&&result.errors.some(s=>s.includes(expect));return {name,ok,expected:expect,...(!ok?{errors:result.errors.slice(0,8)}:{})}});
 }
 if(require.main===module){
- const {files,schema}=readInputs();const results=negativeFixtures(files,schema);
+ const {files,schema,options}=readInputs();const results=negativeFixtures(files,schema,options);
  console.log(JSON.stringify({total:results.length,passed:results.filter(x=>x.ok).length,results},null,2));
  if(results.some(x=>!x.ok))process.exitCode=1;
 }
